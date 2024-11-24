@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Nunito:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #ffffff;
+  --primary-color-light: #f8f8f8;
+  --secondary-color: #ffb300;
+  --paragraph-color: #555555;
+}
+
+.dark {
+  --primary-color: #1a1a1a;
+  --primary-color-light: #242424;
+  --secondary-color: #ffb300;
+  --paragraph-color: #dddddd;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-paragraphColor bg-primaryColor tracking-wider font-dmSans dark:text-whiteColor;
+  }
+
+  section {
+    @apply pt-16 pb-4 md:pt-20 py-16;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply bg-secondaryColor text-whiteColor py-2 px-4 rounded-md text-sm font-medium hover:bg-whiteColor hover:text-secondaryColor transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply bg-secondaryColor text-black py-2 px-4 rounded-md text-lg font-medium hover:bg-whiteColor transition-all duration-300;
+  }
+}
+
+@layer utilities {
+  .home__title,
+  .card__title {
+    @apply text-4xl font-osWald uppercase lg:text-6xl font-bold;
+  }
+
+  .card__title {
+    @apply text-xl;
+  }
+
+  .separator {
+    @apply w-40 h-[2px] bg-secondaryColor rounded-full my-5 mx-auto;
+  }
+
+  .paragraph {
+    @apply text-base font-normal leading-7 text-paragraphColor;
+  }
+
+  .section__title {
+    @apply text-center text-3xl font-osWald font-bold uppercase;
+  }
+
+  .active {
+    @apply bg-secondaryColor text-primaryColor;
+  }
+
+  .form-input {
+    @apply w-full px-4 py-3 bg-primaryColor rounded-lg focus:outline-none focus:ring-2 focus:ring-secondaryColor;
+  }
+
+  .news-input {
+    @apply w-full px-4 py-3 bg-primaryColorLight rounded-lg focus:outline-none focus:ring-2 focus:ring-secondaryColor;
+  }
+}

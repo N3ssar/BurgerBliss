@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--~~~~~~~~~~~~~~~ Favicon ~~~~~~~~~~~~~~~-->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+
+    <!--~~~~~~~~~~~~~~~ Font Awesome ~~~~~~~~~~~~~~~-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--~~~~~~~~~~~~~~~ Remix Icon ~~~~~~~~~~~~~~~-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!--  Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <!--~~~~~~~~~~~~~~~ CSS ~~~~~~~~~~~~~~~-->
+    <link href="/dist/output.css" rel="stylesheet" />
+
+    <title>Burger website</title>
+  </head>
+  <body class="overflow-x-hidden">
+    <!--~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~-->
+    <header
+      class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-primaryColor"
+      id="header"
+    >
+      <nav
+        class="container mx-auto px-4 relative h-16 flex justify-between items-center"
+      >
+        <!-- Logo -->
+        <div>
+          <a href="#" class="text-2xl font-bold uppercase">
+            Bur<span class="text-secondaryColor">ger</span>
+          </a>
+        </div>
+
+        <!-- Navigation Menu -->
+        <div
+          id="nav-menu"
+          class="fixed top-0 left-0 w-full h-[100vh] bg-primaryColor -translate-x-full md:static md:h-auto md:w-auto md:bg-transparent md:translate-x-0 transition-transform duration-300 ease-in-out"
+        >
+          <ul
+            class="flex flex-col items-center justify-center h-full gap-8 md:flex-row md:h-auto md:gap-12"
+          >
+            <li>
+              <a
+                href="#home"
+                class="nav-link text-lg hover:text-secondaryColor transition-colors"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="nav-link text-lg hover:text-secondaryColor transition-colors"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="#menu"
+                class="nav-link text-lg hover:text-secondaryColor transition-colors"
+                >Menu</a
+              >
+            </li>
+            <li>
+              <a
+                href="#review"
+                class="nav-link text-lg hover:text-secondaryColor transition-colors"
+                >Review</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="nav-link text-lg hover:text-secondaryColor transition-colors"
+                >Contact</a
+              >
+            </li>
+          </ul>
+
+          <!-- Close Button - Mobile Only -->
+          <button id="close-menu" class="absolute top-4 right-4 p-2 md:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Theme Switch -->
+        <div class="flex items-center gap-4">
+          <button id="theme-toggle" class="p-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+              />
+            </svg>
+          </button>
+
+          <!-- Hamburger - Mobile Only -->
+          <button id="open-menu" class="p-2 md:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!--~~~~~~~~~~~~~~~ Home ~~~~~~~~~~~~~~~-->
+      <section id="home" class="md:min-h-full">
+        <div
+          class="container px-4 flex flex-col items-center gap-10 md:flex-row"
+        >
+          <div
+            class="home__image mx-auto text-center md:basis-1/2 lg:basis-2/5 animate-movingY"
+          >
+            <img
+              src="./img/home-image.png"
+              class="w-60 md:w-full"
+              alt="Home Image"
+            />
+          </div>
+
+          <div
+            class="home__content mx-auto text-center md:basis-1/2 md:text-start lg:basis-3/5"
+          >
+            <h1 class="home__title">HAPPY TUMMY WITH TASTY BURGERS.</h1>
+            <div class="separator md:mx-0"></div>
+            <p class="paragrap">
+              At Happy Tummy, we believe that every bite should bring joy. Our
+              burgers are crafted with the finest ingredients, ensuring each
+              meal is not only delicious but also nourishing. From juicy patties
+              to fresh toppings, we take pride in serving food that satisfies
+              your cravings and delights your taste buds. Join us on a culinary
+              journey where flavor meets quality, and every meal is a
+              celebration of good food and good times.
+            </p>
+            <div
+              class="text-base flex justify-center gap-4 py-10 md:justify-start mr-4"
+            >
+              <div class="text-center text-4xl">
+                <i
+                  class="fa-solid fa-utensils text-secondaryColor text-4xl"
+                ></i>
+                <br />
+                Delicious
+              </div>
+              <div class="text-center text-4xl">
+                <i class="fa-solid fa-droplet text-secondaryColor text-4xl"></i>
+                <br />
+                Fresh
+              </div>
+              <div class="text-center text-4xl">
+                <i class="fa-brands fa-envira text-secondaryColor text-4xl"></i>
+                <br />
+                Organic
+              </div>
+            </div>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </section>
+
+      <!--~~~~~~~~~~~~~~~ Category ~~~~~~~~~~~~~~~-->
+      <section id="category">
+        <div class="container px-4 flex flex-col gap-5 md:flex-row">
+          <!-- Card 1 -->
+          <div
+            class="category__card bg-secondaryColor flex py-3 rounded-lg overflow-hidden md:flex-1"
+          >
+            <div class="basis-1/3 relative">
+              <img
+                src="img/burger-1.png"
+                alt="Category Image"
+                class="absolute w-28 -bottom-4 -left-4"
+              />
+            </div>
+
+            <div>
+              <div class="mb-2">
+                <h4 class="card__title">Food</h4>
+                <p class="text-xs">Lorem ipsum dolor sit amet.</p>
+              </div>
+              <a href="#" class="text-black cursor-pointer">Buy Online</a>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="category__card bg-redColor flex py-3 rounded-lg overflow-hidden md:flex-1"
+          >
+            <div class="basis-1/3 relative">
+              <img
+                src="img/burger-2.png"
+                alt="Category Image"
+                class="absolute w-28 -bottom-4 -left-4"
+              />
+            </div>
+
+            <div>
+              <div class="mb-2">
+                <h4 class="card__title">Food</h4>
+                <p class="text-xs">Lorem ipsum dolor sit amet.</p>
+              </div>
+              <a href="#" class="text-secondaryColor cursor-pointer"
+                >Buy Online</a
+              >
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="category__card bg-greenColor flex py-3 rounded-lg overflow-hidden md:flex-1"
+          >
+            <div class="basis-1/3 relative">
+              <img
+                src="img/burger-3.png"
+                alt="Category Image"
+                class="absolute w-28 -bottom-4 -left-4"
+              />
+            </div>
+
+            <div>
+              <div class="mb-2">
+                <h4 class="card__title">Food</h4>
+                <p class="text-xs">Lorem ipsum dolor sit amet.</p>
+              </div>
+              <a href="#" class="text-secondaryColor cursor-pointer"
+                >Buy Online</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--~~~~~~~~~~~~~~~ Promo ~~~~~~~~~~~~~~~-->
+      <section id="promo">
+        <div
+          class="conatiner flex flex-col gap-5 md:flex-row justify-center px-4"
+        >
+          <!-- Card 1 -->
+          <div
+            class="promo__card bg-primaryColorLight flex flex-col p-4 rounded-lg md:basis-1/3"
+          >
+            <img
+              src="img/promo-1.png"
+              class="w-40 mx-auto hover:animate-movingY"
+              alt="Promo Image"
+            />
+
+            <div class="space-y-2 pt-5">
+              <p class="text-xs text-secondaryColor">Payday promo</p>
+              <h3 class="card__title">GET A 10% DISCOUNT ON PAYDAY WEEK</h3>
+              <p class="paragraph">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Laboriosam cupiditate minus, tenetur nisi, necessitatibus
+                maiores dolores blanditiis ducimus sapiente cumque repellendus,
+                laudantium reprehenderit minima eum saepe hic sit consequuntur
+                vero?
+              </p>
+              <a href="#" class="text-xs text-secondaryColor">Buy Online</a>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="promo__card bg-primaryColorLight flex flex-col p-5 rounded-lg md:basis-1/3"
+          >
+            <img
+              src="img/promo-2.png"
+              class="w-40 mx-auto hover:animate-movingY"
+              alt="Promo Image"
+            />
+
+            <div class="space-y-2 pt-5">
+              <p class="text-xs text-secondaryColor">Payday promo</p>
+              <h3 class="card__title">GET A 20% DISCOUNT ON PAYDAY WEEK</h3>
+              <p class="paragraph">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Laboriosam cupiditate minus, tenetur nisi, necessitatibus
+                maiores dolores blanditiis ducimus sapiente cumque repellendus,
+                laudantium reprehenderit minima eum saepe hic sit consequuntur
+                vero?
+              </p>
+              <a href="#" class="text-xs text-secondaryColor">Buy Online</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--~~~~~~~~~~~~~~~ About ~~~~~~~~~~~~~~~-->
+      <section id="about">
+        <div
+          class="container px-4 flex flex-col gap-10 md:flex-row items-center"
+        >
+          <div class="about__img flex-1">
+            <img src="img/about.jpg" class="rounded-lg" alt="About Image" />
+          </div>
+          <div class="about__content flex-1">
+            <h2 class="section__title">
+              FIND FOOD AND DRINKS, ALL-IN-ONE PLACE FOR YOUR BEST TASTE.
+            </h2>
+            <div class="separator"></div>
+            <p class="paragraph">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Perferendis quod debitis error totam neque sint minima quibusdam.
+              Autem dolore dolor excepturi enim, magni, accusantium nihil
+              voluptate fugit quis fugiat saepe.
+            </p>
+            <ul class="grid grid-cols-2 py-4 space-y-2">
+              <li class="text-xs text-paragraphColor">
+                <i class="fa-solid fa-check text-secondaryColor"></i>
+                Best Price
+              </li>
+              <li class="text-xs text-paragraphColor">
+                <i class="fa-solid fa-check text-secondaryColor"></i>
+                Fresh Ingredient
+              </li>
+              <li class="text-xs text-paragraphColor">
+                <i class="fa-solid fa-check text-secondaryColor"></i>
+                Best Service
+              </li>
+              <li class="text-xs text-paragraphColor">
+                <i class="fa-solid fa-check text-secondaryColor"></i>
+                Health Protocol
+              </li>
+              <a href="#" class="btn btn-primary">About Us</a>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!--~~~~~~~~~~~~~~~ Menu ~~~~~~~~~~~~~~~-->
+      <section id="menu">
+        <div class="container px-4">
+          <div class="max-w-md mx-auto text-center">
+            <h2 class="section__title">OUR BEST MENU</h2>
+            <div class="separator mx-auto"></div>
+            <p class="paragraph">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde,
+              quibusdam! Iusto illum in quia natus recusandae eveniet explicabo
+              praesentium magnam aliquam.
+            </p>
+            <div class="tabs__wrapper">
+              <ul class="flex gap-3 justify-center flex-wrap py-10">
+                <li
+                  class="menu__tab btn bg-primaryColorLight hover:bg-secondaryColor hover:text-primaryColor active"
+                  data-name="all"
+                >
+                  All
+                </li>
+                <li
+                  class="menu__tab btn bg-primaryColorLight hover:bg-secondaryColor hover:text-primaryColor"
+                  data-name="food"
+                >
+                  Food
+                </li>
+                <li
+                  class="menu__tab btn bg-primaryColorLight hover:bg-secondaryColor hover:text-primaryColor"
+                  data-name="snack"
+                >
+                  Snack
+                </li>
+                <li
+                  class="menu__tab btn bg-primaryColorLight hover:bg-secondaryColor hover:text-primaryColor"
+                  data-name="beverage"
+                >
+                  Beverage
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <ul
+              class="menu__items grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 lg:gap-12"
+            >
+              <!-- Food -->
+              <li class="menu__item" data-category="food">
+                <div
+                  class="h-72 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondaryColor hover:text-primaryColor ease-linear duration-300 lg-h-48 lg-w-24"
+                >
+                  <img
+                    src="img/burger-2.png"
+                    class="w-40 hover:scale-110 ease-linear duration-300"
+                    alt="Food image"
+                  />
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">REGULAR BEEF BURGER</h4>
+                    <p class="paragraph">
+                      Beef patty with cheddar cheese, lettuce, tomato, pickles,
+                      and ketchup.
+                    </p>
+                  </div>
+
+                  <p class="text-secondaryColor">$42.00</p>
+                </div>
+              </li>
+              <li class="menu__item" data-category="food">
+                <div
+                  class="h-72 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondaryColor hover:text-primaryColor ease-linear duration-300 lg-h-48 lg-w-24"
+                >
+                  <img
+                    src="img/burger-1.png"
+                    class="w-40 hover:scale-110 ease-linear duration-300"
+                    alt="Food image"
+                  />
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">BBQ Bacon Burger</h4>
+                    <p class="paragraph">
+                      Beef patty topped with crispy bacon, BBQ sauce, onion
+                      rings, and cheddar cheese.
+                    </p>
+                  </div>
+
+                  <p class="text-secondaryColor">$42.00</p>
+                </div>
+              </li>
+              <li class="menu__item" data-category="food">
+                <div
+                  class="h-72 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondaryColor hover:text-primaryColor ease-linear duration-300 lg-h-48 lg-w-24"
+                >
+                  <img
+                    src="img/burger-2.png"
+                    class="w-40 hover:scale-110 ease-linear duration-300"
+                    alt="Food image"
+                  />
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Mushroom Swiss Burger</h4>
+                    <p class="paragraph">
+                      Beef patty with sautéed mushrooms, Swiss cheese, and
+                      garlic aioli.
+                    </p>
+                  </div>
+
+                  <p class="text-secondaryColor">$22.00</p>
+                </div>
+              </li>
+              <li class="menu__item" data-category="food">
+                <div
+                  class="h-72 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondaryColor hover:text-primaryColor ease-linear duration-300 lg-h-48 lg-w-24"
+                >
+                  <img
+                    src="img/burger-3.png"
+                    class="w-40 hover:scale-110 ease-linear duration-300"
+                    alt="Food image"
+                  />
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Spicy Jalapeño Burger</h4>
+                    <p class="paragraph">
+                      Beef patty with pepper jack cheese, jalapeños, and spicy
+                      mayo.
+                    </p>
+                  </div>
+
+                  <p class="text-secondaryColor">$32.00</p>
+                </div>
+              </li>
+              <li class="menu__item" data-category="food">
+                <div
+                  class="h-72 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondaryColor hover:text-primaryColor ease-linear duration-300 lg-h-48 lg-w-24"
+                >
+                  <img
+                    src="img/burger-4.png"
+                    class="w-40 hover:scale-110 ease-linear duration-300"
+                    alt="Food image"
+                  />
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Veggie Burger</h4>
+                    <p class="paragraph">Veggie Burger</p>
+                  </div>
+
+                  <p class="text-secondaryColor">$18.00</p>
+                </div>
+              </li>
+              <li class="menu__item" data-category="food">
+                <div
+                  class="h-72 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondaryColor hover:text-primaryColor ease-linear duration-300 lg-h-48 lg-w-24"
+                >
+                  <img
+                    src="img/burger-5.png"
+                    class="w-40 hover:scale-110 ease-linear duration-300"
+                    alt="Food image"
+                  />
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Chicken Burger:</h4>
+                    <p class="paragraph">
+                      Grilled or fried chicken breast with lettuce, tomato, and
+                      mayo, served on a bun.
+                    </p>
+                  </div>
+
+                  <p class="text-secondaryColor">$14.00</p>
+                </div>
+              </li>
+              <li class="menu__item" data-category="food">
+                <div
+                  class="h-72 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondaryColor hover:text-primaryColor ease-linear duration-300 lg-h-48 lg-w-24"
+                >
+                  <img
+                    src="img/burger-6.png"
+                    class="w-40 hover:scale-110 ease-linear duration-300"
+                    alt="Food image"
+                  />
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Black Bean Burger</h4>
+                    <p class="paragraph">
+                      A hearty black bean patty topped with avocado, lettuce,
+                      and salsa.
+                    </p>
+                  </div>
+
+                  <p class="text-secondaryColor">$35.00</p>
+                </div>
+              </li>
+
+              <!-- Snacks -->
+              <li class="menu__item" data-category="snack">
+                <div
+                  class="h-72 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondaryColor hover:text-primaryColor ease-linear duration-300 lg-h-48 lg-w-24"
+                >
+                  <img
+                    src="img/snack-1.png"
+                    class="w-40 hover:scale-110 ease-linear duration-300"
+                    alt="snack image"
+                  />
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Potato Wedges</h4>
+                    <p class="paragraph">
+                      Seasoned and baked or fried potato wedges, often served
+                      with a dipping sauce.
+                    </p>
+                  </div>
+
+                  <p class="text-secondaryColor">$35.00</p>
+                </div>
+              </li>
+              <li class="menu__item" data-category="snack">
+                <div
+                  class="h-72 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondaryColor hover:text-primaryColor ease-linear duration-300 lg-h-48 lg-w-24"
+                >
+                  <img
+                    src="img/snack-2.png"
+                    class="w-40 hover:scale-110 ease-linear duration-300"
+                    alt="snack image"
+                  />
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Chicken Wings</h4>
+                    <p class="paragraph">
+                      Spicy or BBQ-flavored wings served with ranch or blue
+                      cheese dressing.
+                    </p>
+                  </div>
+
+                  <p class="text-secondaryColor">$12.00</p>
+                </div>
+              </li>
+              <li class="menu__item" data-category="snack">
+                <div
+                  class="h-72 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondaryColor hover:text-primaryColor ease-linear duration-300 lg-h-48 lg-w-24"
+                >
+                  <img
+                    src="img/snack-3.png"
+                    class="w-40 hover:scale-110 ease-linear duration-300"
+                    alt="snack image"
+                  />
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Mozzarella Sticks</h4>
+                    <p class="paragraph">
+                      Breaded and fried cheese sticks served with marinara
+                      sauce.
+                    </p>
+                  </div>
+
+                  <p class="text-secondaryColor">$8.00</p>
+                </div>
+              </li>
+              <li class="menu__item" data-category="snack">
+                <div
+                  class="h-72 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondaryColor hover:text-primaryColor ease-linear duration-300 lg-h-48 lg-w-24"
+                >
+                  <img
+                    src="img/snack-4.png"
+                    class="w-40 hover:scale-110 ease-linear duration-300"
+                    alt="snack image"
+                  />
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Nachos</h4>
+                    <p class="paragraph">
+                      Tortilla chips topped with cheese, jalapeños, salsa, and
+                      guacamole.
+                    </p>
+                  </div>
+
+                  <p class="text-secondaryColor">$9.00</p>
+                </div>
+              </li>
+              <li class="menu__item" data-category="snack">
+                <div
+                  class="h-72 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondaryColor hover:text-primaryColor ease-linear duration-300 lg-h-48 lg-w-24"
+                >
+                  <img
+                    src="img/snack-5.png"
+                    class="w-40 hover:scale-110 ease-linear duration-300"
+                    alt="snack image"
+                  />
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">French Fries</h4>
+                    <p class="paragraph">
+                      Crispy, bite-sized potato rounds that are fun to munch on.
+                    </p>
+                  </div>
+
+                  <p class="text-secondaryColor">$5.00</p>
+                </div>
+              </li>
+              <li class="menu__item" data-category="snack">
+                <div
+                  class="h-72 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondaryColor hover:text-primaryColor ease-linear duration-300 lg-h-48 lg-w-24"
+                >
+                  <img
+                    src="img/snack-6.png"
+                    class="w-40 hover:scale-110 ease-linear duration-300"
+                    alt="snack image"
+                  />
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Tater Tots</h4>
+                    <p class="paragraph">
+                      Fries topped with melted cheese, jalapeños, sour cream,
+                      and guacamole.
+                    </p>
+                  </div>
+
+                  <p class="text-secondaryColor">$3.00</p>
+                </div>
+              </li>
+
+              <!-- Beverages -->
+              <li class="menu__item" data-category="beverage">
+                <div
+                  class="h-72 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondaryColor hover:text-primaryColor ease-linear duration-300 lg-h-48 lg-w-24"
+                >
+                  <img
+                    src="img/beverage-1.png"
+                    class="w-40 hover:scale-110 ease-linear duration-300"
+                    alt="beverage image"
+                  />
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Milkshake</h4>
+                    <p class="paragraph">
+                      Creamy shakes in flavors like chocolate, vanilla, or
+                      strawberry.
+                    </p>
+                  </div>
+
+                  <p class="text-secondaryColor">$35.00</p>
+                </div>
+              </li>
+              <li class="menu__item" data-category="beverage">
+                <div
+                  class="h-72 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondaryColor hover:text-primaryColor ease-linear duration-300 lg-h-48 lg-w-24"
+                >
+                  <img
+                    src="img/beverage-2.png"
+                    class="w-40 hover:scale-110 ease-linear duration-300"
+                    alt="beverage image"
+                  />
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Craft Beer</h4>
+                    <p class="paragraph">
+                      A selection of local or popular craft beers to pair with
+                      burgers.
+                    </p>
+                  </div>
+
+                  <p class="text-secondaryColor">$12.00</p>
+                </div>
+              </li>
+              <li class="menu__item" data-category="beverage">
+                <div
+                  class="h-72 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondaryColor hover:text-primaryColor ease-linear duration-300 lg-h-48 lg-w-24"
+                >
+                  <img
+                    src="img/beverage-3.png"
+                    class="w-40 hover:scale-110 ease-linear duration-300"
+                    alt="beverage image"
+                  />
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Milkshake</h4>
+                    <p class="paragraph">
+                      Creamy shakes in flavors like chocolate, vanilla, or
+                      strawberry
+                    </p>
+                  </div>
+
+                  <p class="text-secondaryColor">$8.00</p>
+                </div>
+              </li>
+              <li class="menu__item" data-category="beverage">
+                <div
+                  class="h-72 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondaryColor hover:text-primaryColor ease-linear duration-300 lg-h-48 lg-w-24"
+                >
+                  <img
+                    src="img/beverage-4.png"
+                    class="w-40 hover:scale-110 ease-linear duration-300"
+                    alt="beverage image"
+                  />
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Soda</h4>
+                    <p class="paragraph">
+                      Classic options like cola, lemon-lime, or root beer.
+                    </p>
+                  </div>
+
+                  <p class="text-secondaryColor">$9.00</p>
+                </div>
+              </li>
+              <li class="menu__item" data-category="beverage">
+                <div
+                  class="h-72 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondaryColor hover:text-primaryColor ease-linear duration-300 lg-h-48 lg-w-24"
+                >
+                  <img
+                    src="img/beverage-5.png"
+                    class="w-40 hover:scale-110 ease-linear duration-300"
+                    alt="beverage image"
+                  />
+                </div>
+
+                <div class="pt-5">
+                  <div class="mb-2">
+                    <h4 class="card__title">Iced Tea:</h4>
+                    <p class="paragraph">
+                      Refreshing sweetened or unsweetened iced tea.
+                    </p>
+                  </div>
+
+                  <p class="text-secondaryColor">$5.00</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!--~~~~~~~~~~~~~~~ Review ~~~~~~~~~~~~~~~-->
+      <section id="review" class="bg-primaryColorLight">
+        <div class="container px-4">
+          <div class="max-w-md mx-auto text-center">
+            <h2 class="section__title">CUSTOMER REVIEW</h2>
+            <div class="separator mx-auto"></div>
+            <p class="paragraph">
+              We're proud of our reputation for serving the best food and
+            </p>
+          </div>
+
+          <div class="swiper py-10">
+            <ul class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <li class="customer__review swiper-slide">
+                <div class="flex flex-col gap-5 bg-primaryColor rounded-lg p-6">
+                  <p class="paragraph">
+                    "I had the best burger I've ever had at this restaurant."
+                  </p>
+                  <div class="flex items-center gap-4 relative">
+                    <img
+                      src="img/review-1.jpg"
+                      alt="Customer 1 image"
+                      class="w-12 h-12 rounded-full object-cover"
+                    />
+                    <div>
+                      <p class="font-bold font-oswald uppercase">
+                        <span class="text-secondaryColor">John Doe</span>
+                      </p>
+                      <p class="text-sm text-paragraphColor">Designer</p>
+                    </div>
+                    <i
+                      class="fa-solid fa-quote-right text-secondaryColor text-3xl absolute right-0"
+                    ></i>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Slide 2 -->
+              <li class="customer__review swiper-slide">
+                <div class="flex flex-col gap-5 bg-primaryColor rounded-lg p-6">
+                  <p class="paragraph">
+                    "Amazing flavors and great service! Will definitely come
+                    back."
+                  </p>
+                  <div class="flex items-center gap-4 relative">
+                    <img
+                      src="img/review-2.jpg"
+                      alt="Customer 2 image"
+                      class="w-12 h-12 rounded-full object-cover"
+                    />
+                    <div>
+                      <p class="font-bold font-oswald uppercase">
+                        <span class="text-secondaryColor">Sarah Smith</span>
+                      </p>
+                      <p class="text-sm text-paragraphColor">Developer</p>
+                    </div>
+                    <i
+                      class="fa-solid fa-quote-right text-secondaryColor text-3xl absolute right-0"
+                    ></i>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Slide 3 -->
+              <li class="customer__review swiper-slide">
+                <div class="flex flex-col gap-5 bg-primaryColor rounded-lg p-6">
+                  <p class="paragraph">
+                    "The burgers here are absolutely fantastic! A must-try
+                    place."
+                  </p>
+                  <div class="flex items-center gap-4 relative">
+                    <img
+                      src="img/review-3.jpg"
+                      alt="Customer 3 image"
+                      class="w-12 h-12 rounded-full object-cover"
+                    />
+                    <div>
+                      <p class="font-bold font-oswald uppercase">
+                        <span class="text-secondaryColor">Mike Johnson</span>
+                      </p>
+                      <p class="text-sm text-paragraphColor">Chef</p>
+                    </div>
+                    <i
+                      class="fa-solid fa-quote-right text-secondaryColor text-3xl absolute right-0"
+                    ></i>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Slide 4 -->
+              <li class="customer__review swiper-slide">
+                <div class="flex flex-col gap-5 bg-primaryColor rounded-lg p-6">
+                  <p class="paragraph">
+                    "Perfect spot for burger lovers. Great atmosphere and
+                    taste!"
+                  </p>
+                  <div class="flex items-center gap-4 relative">
+                    <img
+                      src="img/review-4.jpg"
+                      alt="Customer 4 image"
+                      class="w-12 h-12 rounded-full object-cover"
+                    />
+                    <div>
+                      <p class="font-bold font-oswald uppercase">
+                        <span class="text-secondaryColor">Emma Davis</span>
+                      </p>
+                      <p class="text-sm text-paragraphColor">Artist</p>
+                    </div>
+                    <i
+                      class="fa-solid fa-quote-right text-secondaryColor text-3xl absolute right-0"
+                    ></i>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Slide 5 -->
+              <li class="customer__review swiper-slide">
+                <div class="flex flex-col gap-5 bg-primaryColor rounded-lg p-6">
+                  <p class="paragraph">
+                    "Outstanding quality and portion sizes. Worth every penny!"
+                  </p>
+                  <div class="flex items-center gap-4 relative">
+                    <img
+                      src="img/review-5.jpg"
+                      alt="Customer 5 image"
+                      class="w-12 h-12 rounded-full object-cover"
+                    />
+                    <div>
+                      <p class="font-bold font-oswald uppercase">
+                        <span class="text-secondaryColor">Tom Wilson</span>
+                      </p>
+                      <p class="text-sm text-paragraphColor">Engineer</p>
+                    </div>
+                    <i
+                      class="fa-solid fa-quote-right text-secondaryColor text-3xl absolute right-0"
+                    ></i>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <!-- Pagination Dots -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <!--~~~~~~~~~~~~~~~ Contact ~~~~~~~~~~~~~~~-->
+      <!-- Contact Section -->
+      <section id="contact" class="bg-primaryColorLight">
+        <div class="container px-4 py-20">
+          <div class="max-w-md mx-auto text-center">
+            <h2 class="section__title">CONTACT US</h2>
+            <div class="separator mx-auto"></div>
+            <p class="paragraph">
+              Get in touch with us for the best burger experience
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-20 mt-16">
+            <!-- Contact Info -->
+            <div class="space-y-8">
+              <div class="flex items-center gap-4">
+                <i class="ri-map-pin-2-fill text-4xl text-secondaryColor"></i>
+                <div>
+                  <h3 class="text-xl font-oswald mb-1">Our Location</h3>
+                  <p class="paragraph">
+                    123 Burger Street, Food City, FC 12345
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <i class="ri-phone-fill text-4xl text-secondaryColor"></i>
+                <div>
+                  <h3 class="text-xl font-oswald mb-1">Phone Number</h3>
+                  <p class="paragraph">+1 234 567 8900</p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <i class="ri-mail-fill text-4xl text-secondaryColor"></i>
+                <div>
+                  <h3 class="text-xl font-oswald mb-1">Email Address</h3>
+                  <p class="paragraph">info@burgerhouse.com</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <form class="space-y-6">
+              <div class="grid md:grid-cols-2 gap-6">
+                <input
+                  type="text"
+                  placeholder="First Name"
+                  class="form-input"
+                  required
+                />
+                <input
+                  type="text"
+                  placeholder="Last Name"
+                  class="form-input"
+                  required
+                />
+              </div>
+              <input
+                type="email"
+                placeholder="Email Address"
+                class="form-input"
+                required
+              />
+              <textarea
+                rows="6"
+                placeholder="Your Message"
+                class="form-input resize-none"
+                required
+              ></textarea>
+              <button type="submit" class="btn btn-primary">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!--~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~-->
+      <footer class="bg-primaryColor">
+        <div class="container px-4 py-16">
+          <div class="footer__content grid md:grid-cols-3 gap-12">
+            <!-- About -->
+            <div class="space-y-6">
+              <a href="#" class="text-2xl font-bold uppercase">
+                Bur<span class="text-secondaryColor">ger</span>
+              </a>
+              <p class="paragraph">
+                Serving the best burgers in town since 2024. Quality
+                ingredients, amazing taste.
+              </p>
+              <div class="flex gap-4">
+                <a
+                  href="https://www.linkedin.com/in/muhammad-ahmad-nassar/"
+                  target="_blank"
+                  class="text-2xl hover:text-secondaryColor transition-colors"
+                >
+                  <i class="ri-linkedin-fill"></i>
+                </a>
+                <a
+                  href="https://github.com/N3ssar"
+                  target="_blank"
+                  class="text-2xl hover:text-secondaryColor transition-colors"
+                >
+                  <i class="ri-github-fill"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Opening Hours -->
+            <div>
+              <h4 class="text-xl font-oswald mb-6">Opening Hours</h4>
+              <div class="space-y-4">
+                <p class="paragraph">Monday - Friday: 8AM - 10PM</p>
+                <p class="paragraph">Saturday - Sunday: 10AM - 11PM</p>
+              </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div>
+              <h4 class="text-xl font-oswald mb-6">Newsletter</h4>
+              <form class="flex gap-2">
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  class="form-input flex-1 bg-primaryColorLight news-input"
+                  required
+                />
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+              </form>
+            </div>
+          </div>
+
+          <div
+            class="border-t border-primaryColorLight/30 mt-16 pt-6 text-center"
+          >
+            <p class="paragraph">
+              © 2024 Burger House. Template crafted by
+              <a
+                href="https://www.linkedin.com/in/muhammad-ahmad-nassar/"
+                target="_blank"
+                class="text-secondaryColor hover:underline"
+              >
+                Muhammad Nassar
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!--~~~~~~~~~~~~~~~ Scroll Up ~~~~~~~~~~~~~~~-->
+    <a
+      href="#"
+      id="scrollTop"
+      class="fixed right-4 bottom-4 bg-secondaryColor p-3 rounded-full shadow-lg cursor-pointer opacity-0 transition-opacity duration-300 hover:bg-primaryColorLight"
+    >
+      <i class="ri-arrow-up-line text-2xl text-primaryColor"></i>
+    </a>
+
+    <!--~~~~~~~~~~~~~~~rev JS ~~~~~~~~~~~~~~~-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--~~~~~~~~~~~~~~~ Swiper JS ~~~~~~~~~~~~~~~-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!--~~~~~~~~~~~~~~~ Scroll Reveal ~~~~~~~~~~~~~~~-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!--~~~~~~~~~~~~~~~ Main.js ~~~~~~~~~~~~~~~-->
+    <script src="src/main.js"></script>
+  </body>
+</html>
