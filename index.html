@@ -36,8 +36,7 @@
   <body class="overflow-x-hidden">
     <!--~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~-->
     <header
-      class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-primaryColor"
-      id="header"
+      class="fixed top-0 left-0 w-full max-w-full z-50 transition-all duration-300 bg-primaryColor"
     >
       <nav
         class="container mx-auto px-4 relative h-16 flex justify-between items-center"
@@ -52,7 +51,7 @@
         <!-- Navigation Menu -->
         <div
           id="nav-menu"
-          class="fixed top-0 left-0 w-full h-[100vh] bg-primaryColor -translate-x-full md:static md:h-auto md:w-auto md:bg-transparent md:translate-x-0 transition-transform duration-300 ease-in-out"
+          class="fixed top-0 left-0 w-[100%] h-[100vh] bg-primaryColor -translate-x-full md:static md:h-auto md:w-auto md:bg-transparent md:translate-x-0 transition-transform duration-300 ease-in-out"
         >
           <ul
             class="flex flex-col items-center justify-center h-full gap-8 md:flex-row md:h-auto md:gap-12"
@@ -114,7 +113,7 @@
         </div>
 
         <!-- Theme Switch -->
-        <div class="flex items-center gap-4">
+        <div class="flex items-center">
           <button id="theme-toggle" class="p-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -34,7 +34,7 @@
 
 @layer components {
   .btn {
-    @apply bg-secondaryColor text-whiteColor py-2 px-4 rounded-md text-sm font-medium hover:bg-whiteColor hover:text-secondaryColor transition-all duration-300;
+    @apply bg-secondaryColor text-paragraphColor py-2 px-4 rounded-md text-sm font-medium hover:bg-whiteColor hover:text-secondaryColor transition-all duration-300;
   }
 
   .btn-primary {
