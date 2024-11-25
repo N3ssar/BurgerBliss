@@ -621,8 +621,7 @@ section{
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 500;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  color: var(--paragraph-color);
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
@@ -789,8 +788,16 @@ section{
   width: 15rem;
 }
 
+.w-\[100\%\]{
+  width: 100%;
+}
+
 .w-full{
   width: 100%;
+}
+
+.max-w-full{
+  max-width: 100%;
 }
 
 .max-w-md{
