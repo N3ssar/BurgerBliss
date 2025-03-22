@@ -1,6 +1,6 @@
 # BurgerBliss 🍔
 
-[live-url]: https://tummyburgerbliss.netlify.app/
+[Live URL](https://tummyburgerbliss.netlify.app/)
 
 ## Features ✨
 * 📱 Fully Responsive Design
