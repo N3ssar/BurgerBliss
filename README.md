@@ -1,7 +1,5 @@
 # BurgerBliss 🍔
 
-[![BurgerBliss Preview][preview-image]][live-url]
-
 [live-url]: https://tummyburgerbliss.netlify.app/
 
 ## Features ✨
